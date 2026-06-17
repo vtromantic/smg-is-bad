@@ -114,25 +114,7 @@ function drawPlane(){
     ctx.stroke();
     ctx.restore();
 }
-function drawPipes(){
-    ctx.fillStyle = "white";
-    pipes.forEach(pipe => {
-        // cano superior
-        ctx.fillRect(
-            pipe.x,
-            0,
-            pipe.width,
-            pipe.top
-        );
-        // cano inferior
-        ctx.fillRect(
-            pipe.x,
-            canvas.height - pipe.bottom,
-            pipe.width,
-            pipe.bottom
-        );
-    });
-}
+
 function updatePlane(){
     plane.velocity += gravity;
     plane.y += plane.velocity;
